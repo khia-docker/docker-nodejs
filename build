@@ -1,0 +1,3 @@
+#!/bin/bash
+docker run -t -i -v `pwd`/data:/data -v `pwd`/output:/buildroot/output `whoami`/buildroot build
+docker import - `whoami`/nodejs < output/images/rootfs.tar
